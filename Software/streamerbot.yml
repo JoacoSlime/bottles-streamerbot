@@ -6,7 +6,7 @@ Arch: win64
 Dependencies:
 - allfonts
 - d3dcompiler_47
-- dotnet48
+- dotnet481
 - webview2
 
 Parameters:
@@ -19,7 +19,7 @@ Executable:
   file: Streamer.bot.exe
   icon: streamerbot.svg
   path: users/Public/streamerbot/Streamer.bot.exe
-  arguments: ""
+  arguments: WINEDLLOVERRIDES="mscoree=b" %command%
 
 Steps:
 - action: run_script
